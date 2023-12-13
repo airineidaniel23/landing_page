@@ -8,12 +8,9 @@ import Features from "./components/Features/Features";
 import Growth from "./components/Growth/Growth";
 import Questions from "./components/Questions/Questions";
 import Footer from "./components/Footer/Footer";
-import ReactGA from "react-ga"
 
 const App = () => {
   const [hamActive, setHamActive] = useState(false);
-  ReactGA.initialize("G-EXL2NCB570");
-  ReactGA.pageview(window.location.pathname + window.location.search);
   return (
     <div className="App">
       <Navbar hamActive={hamActive} setHamActive={setHamActive} />

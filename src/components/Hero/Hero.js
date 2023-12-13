@@ -1,4 +1,5 @@
 import styles from "./Hero.module.css";
+import ContactForm from "../ContactForm/ContactForm";
 
 const Hero = () => {
   return (
@@ -19,6 +20,12 @@ const Hero = () => {
           <input type="text" placeholder="Enter your farm location" />
           <i className={`${styles.arrow} fas fa-arrow-right`}></i>
         </div>
+        <br></br>
+        <h3 className={styles.slogan}>
+          <p>Sign up for updates:</p>
+        </h3>
+        <ContactForm />
+        <br></br>
       </div>
       <div className={styles.heroImage}>
         <img
