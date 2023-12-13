@@ -7,7 +7,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 
-ReactGA.initialize("G-EXL2NCB570");
+ReactGA.initialize("G-WGBFV4EW3T");
 ReactDOM.render(
   <React.StrictMode>
     <App />
