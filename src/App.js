@@ -8,6 +8,7 @@ import Features from "./components/Features/Features";
 import Growth from "./components/Growth/Growth";
 import Questions from "./components/Questions/Questions";
 import Footer from "./components/Footer/Footer";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 const App = () => {
   const [hamActive, setHamActive] = useState(false);
@@ -17,6 +18,7 @@ const App = () => {
       <NavbarResponsive hamActive={hamActive} />
       <Hero />
       <Features />
+      <ContactForm />
       <Growth />
       <Questions />
       <Footer />

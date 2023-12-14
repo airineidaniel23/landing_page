@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
+import ContactForm from "../ContactForm/ContactForm";
 
 const Navbar = ({ hamActive, setHamActive }) => {
   const logo =
@@ -24,17 +25,18 @@ const Navbar = ({ hamActive, setHamActive }) => {
           <div className={styles.navLinksWrapper}>
             <div className={styles.verticalLine}> </div>
             <a href="/" className={`${styles.nav} center`}>
-              About
+              Despre noi
             </a>
             <a href="/" className={`${styles.nav} center`}>
               Contact
             </a>
           </div>
           <div>
-            <a href="/" className={styles.login}>
-              Log in
-            </a>
-            <button className={styles.signup}>Sign Up</button>
+            <select className={styles.dropDown}>
+              <option value="RO">RO</option>
+              <option value="EN">EN</option>
+            </select>
+
           </div>
         </div>
       </div>

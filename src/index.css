@@ -33,3 +33,7 @@ li {
   margin: 10px;
   color: #231f20;
 }
+
+input:focus::placeholder {
+  color: transparent;
+}

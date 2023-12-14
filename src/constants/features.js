@@ -1,23 +1,23 @@
 export const features = [
   {
-    feature: "Choose what you want",
+    feature: "Monitorizarea sănătății plantelor",
     description:
-      "Choose which service is best suited for your farms needs.",
+      "Puteți vedea informații cruciale actualizate periodic despre sănătatea întregii culturi.",
     image:
-      "https://photos.peopleimages.com/picture/202306/2868305-phone-couple-and-laughing-in-home-living-room-bonding-and-streaming-funny-comedy.-interracial-cellphone-and-happy-man-and-woman-on-social-media-online-browsing-or-web-scrolling-for-comic-meme-fit_400_400.jpg",
+    "https://t4.ftcdn.net/jpg/03/33/59/69/360_F_333596901_9lw7fccFZwM0sPh8ShtztK8X8N1rXpsX.jpg",
   },
   {
-    feature: "See real-time updates",
+    feature: "Prevenirea dăunătorilor",
     description:
-      "See how your farm looks each day from new satellite images.",
+      "Cu ajutorul nostru puteți vedea zonele afectate de dăunători pentru a acționa prompt.",
     image:
-      "https://d2guulkeunn7d8.cloudfront.net/assets/homepage/real_time_updates-8330ec94f4d8006c6732bb2f65141e3596dcd3be02b0bf0376dcf5e2895fe37e.jpg",
+      "https://safepropest.com/wp-content/uploads/2017/03/Termite-Pest-Control-Frisco-TX-1024x683.jpg",
   },
   {
-    feature: "Prevent crop disease",
+    feature: "Irigare inteligentă",
     description:
-      "Prevent crop disease and drought using specialized data.",
+      "Verificați umiditatea plantelor și a solului pentru a iriga zonele afectate.",
     image:
-      "https://i.ytimg.com/vi/0Bp3T-adOd8/maxresdefault.jpg",
+      "https://cdn.britannica.com/35/157635-050-69B43759/Irrigation-sprinklers.jpg",
   },
 ];

@@ -4,12 +4,12 @@ import { useForm, ValidationError } from '@formspree/react';
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("xrgwnwjz");
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return <p>Mulțumim că te-ai alăturat!</p>;
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form id="contactform" onSubmit={handleSubmit}>
       <label htmlFor="email">
-        Email Address
+        E-mail
       </label>
       
       <div className={styles.inputLocation}>
@@ -29,7 +29,7 @@ const ContactForm = () => {
       />
       
       <label htmlFor="message">
-        Phone number
+        Telefon
       </label>
 
       <div className={styles.inputLocation}>
@@ -47,7 +47,7 @@ const ContactForm = () => {
       />
       <br></br>
       <button type="submit" disabled={state.submitting} className={styles.signup}>
-        Submit
+        Fii la curent
       </button>
       <br></br>
     </form>
