@@ -1,9 +1,10 @@
 import styles from "./Hero.module.css";
 import ContactForm from "../ContactForm/ContactForm";
+import React from 'react';
 
 import { useNavigate } from 'react-router-dom'; 
 const Hero = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   // Function to handle button click
   const goToHeatmap = () => {
@@ -19,9 +20,10 @@ const Hero = () => {
         <div className={styles.slogan}>
           <p>Vezi cum arată ferma ta din spațiu</p>
         </div>
-        <div className={styles.inputLocation}>
+        <div onClick={goToHeatmap} className={styles.inputLocation}>
+          <i className="fas fa-map-marker-alt"> </i>
           <input type="text" placeholder="Localitate" />
-          <a href="#contactform" className={`${styles.arrow} fas fa-arrow-right`}></a>
+          <i className={`${styles.arrow} fas fa-arrow-right`}></i>
         </div>
       </div>
       <div className={styles.heroImage}>

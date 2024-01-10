@@ -14,20 +14,23 @@ import Heatmap from './components/Heatmap/Heatmap';
 
 const App = () => {
   const [hamActive, setHamActive] = useState(false);
+
   return (
-    <div className="App">
-      <Navbar hamActive={hamActive} setHamActive={setHamActive} />
-      <NavbarResponsive hamActive={hamActive} />
-      <Routes>
+    <Router>
+      <div className="App">
+        <Navbar hamActive={hamActive} setHamActive={setHamActive} />
+        <NavbarResponsive hamActive={hamActive} />
+        <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/ndvi" element={<Heatmap/>} />
         </Routes>
-      <Features />
-      <ContactForm />
-      <Growth />
-      <Questions />
-      <Footer />
-    </div>
+        <Features />
+        <ContactForm />
+        <Growth />
+        <Questions />
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
