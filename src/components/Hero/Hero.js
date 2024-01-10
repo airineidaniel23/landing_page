@@ -1,43 +1,35 @@
 import styles from "./Hero.module.css";
 import ContactForm from "../ContactForm/ContactForm";
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import React from 'react';
 
+import { useNavigate } from 'react-router-dom'; 
 const Hero = () => {
-  const navigate = useNavigate(); // Create an instance of useNavigate
+  const navigate = useNavigate();
 
   // Function to handle button click
   const goToHeatmap = () => {
     navigate('/ndvi');
   };
+  
   return (
     <div className={`${styles.heroWrapper} center`}>
-      <select className={styles.dropDown}>
-        <option value="EN">EN</option>
-        <option value="RO">RO</option>
-      </select>
       <div className={`${styles.heroInner}`}>
         <h2 className={styles.headerText}>
-          Monitor your farm today
+          Punem satul pe satelit
         </h2>
         <div className={styles.slogan}>
-          <p>See how your farm looks from space:</p>
+          <p>Vezi cum arată ferma ta din spațiu</p>
         </div>
         <div onClick={goToHeatmap} className={styles.inputLocation}>
           <i className="fas fa-map-marker-alt"> </i>
-          <input type="text" placeholder="Click here to add cordinates" />
+          <input type="text" placeholder="Localitate" />
           <i className={`${styles.arrow} fas fa-arrow-right`}></i>
         </div>
-        <br></br>
-        <h3 className={styles.slogan}>
-          <p>Sign up for updates:</p>
-        </h3>
-        <ContactForm />
-        <br></br>
       </div>
       <div className={styles.heroImage}>
         <img
-          src="https://s3.amazonaws.com/content.satimagingcorp.com/static/galleryimages/NDVI-Vegetation-Index-Soil-Moisture-2021.gif"
+          src="/background.jpg"
           alt=""
         />
       </div>

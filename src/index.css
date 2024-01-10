@@ -27,9 +27,14 @@ li {
 /* App.js */
 .App {
   position: relative;
+
 }
 
 .fab {
   margin: 10px;
   color: #231f20;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }

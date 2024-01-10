@@ -40,10 +40,11 @@
   margin: 25px 0;
 }
 .inputLocation {
+  padding: 5px;
   display: flex;
   justify-content: flex-start;
   width: 475px;
-  background: white;
+  border: 1px solid black;
   border-radius: 0.75rem;
 }
 
@@ -147,4 +148,8 @@
   cursor: pointer;
   outline-style: none;
   border-style: none;
+}
+
+.contactform {
+  margin-left: 35% !important;
 }
