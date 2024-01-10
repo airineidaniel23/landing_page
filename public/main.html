@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Route | Sample | ArcGIS API for JavaScript 4.22</title>
+  <style>
+    html, body, #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    #paneDiv {
+      position: absolute;
+      top: 10px;
+      left: 62px;
+      padding: 0 12px 0 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.22/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.22/"></script>
+</head>
+<body>
+  <div id="viewDiv"></div>
+  <div id="paneDiv" class="esri-widget">
+    <div>
+      <p>Enter Coordinates:</p>
+      <input type="text" id="latBox" placeholder="Latitude">
+      <input type="text" id="longBox" placeholder="Longitude">
+      <button id="zoomBtn">Zoom</button>
+    </div>
+  </div>
+
+  <script>
+    require([
+      "esri/Map",
+      "esri/views/MapView",
+      "esri/layers/ImageryLayer",
+      "esri/widgets/Legend"
+    ], function (
+      Map,
+      MapView,
+      ImageryLayer,
+      Legend
+    ) {
+      const myLayer = new ImageryLayer({
+        url: "https://landsat2.arcgis.com/arcgis/rest/services/Landsat8_Views/ImageServer"
+      });
+
+      const map = new Map({
+        basemap: "satellite",
+        layers: [myLayer]
+      });
+
+      const view = new MapView({
+        container: "viewDiv",
+        map: map,
+        center: [-117.195, 34.057],
+        zoom: 13
+      });
+
+      const legend = new Legend({
+        view: view,
+        layerInfos: [{
+          layer: myLayer,
+          title: "NDVI Legend"
+        }]
+      });
+
+      view.ui.add(legend, "bottom-right");
+
+      document.getElementById('zoomBtn').addEventListener('click', function() {
+        var lat = parseFloat(document.getElementById('latBox').value);
+        var long = parseFloat(document.getElementById('longBox').value);
+
+        if (!isNaN(lat) && !isNaN(long)) {
+          view.goTo({
+            center: [long, lat],
+            zoom: 13
+          });
+        } else {
+          alert('Please enter valid latitude and longitude values');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

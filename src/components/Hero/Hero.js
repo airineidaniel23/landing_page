@@ -1,7 +1,15 @@
 import styles from "./Hero.module.css";
 import ContactForm from "../ContactForm/ContactForm";
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import React from 'react';
 
 const Hero = () => {
+  const navigate = useNavigate(); // Create an instance of useNavigate
+
+  // Function to handle button click
+  const goToHeatmap = () => {
+    navigate('/ndvi');
+  };
   return (
     <div className={`${styles.heroWrapper} center`}>
       <select className={styles.dropDown}>
@@ -15,9 +23,9 @@ const Hero = () => {
         <div className={styles.slogan}>
           <p>See how your farm looks from space:</p>
         </div>
-        <div className={styles.inputLocation}>
+        <div onClick={goToHeatmap} className={styles.inputLocation}>
           <i className="fas fa-map-marker-alt"> </i>
-          <input type="text" placeholder="Enter your farm location" />
+          <input type="text" placeholder="Click here to add cordinates" />
           <i className={`${styles.arrow} fas fa-arrow-right`}></i>
         </div>
         <br></br>

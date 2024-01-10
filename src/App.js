@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Import BrowserRouter
+import Heatmap from './components/Heatmap/Heatmap'; // Import your new component
+
 
 // Components import
 import Navbar from "./components/Navbar/Navbar";
@@ -11,16 +14,22 @@ import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [hamActive, setHamActive] = useState(false);
+
   return (
-    <div className="App">
-      <Navbar hamActive={hamActive} setHamActive={setHamActive} />
-      <NavbarResponsive hamActive={hamActive} />
-      <Hero />
-      <Features />
-      <Growth />
-      <Questions />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar hamActive={hamActive} setHamActive={setHamActive} />
+        <NavbarResponsive hamActive={hamActive} />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/ndvi" element={<Heatmap/>} />
+        </Routes>
+        <Features />
+        <Growth />
+        <Questions />
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
