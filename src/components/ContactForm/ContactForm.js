@@ -7,13 +7,12 @@ const ContactForm = () => {
       return <p>Mulțumim că te-ai alăturat!</p>;
   }
   return (
-    <form id="contactform" onSubmit={handleSubmit}>
+    <form className={styles.contactform} id="contactform" onSubmit={handleSubmit}>
       <label htmlFor="email">
         E-mail
       </label>
       
-      <div className={styles.inputLocation}>
-        <i className="fas"> </i>
+      <div className={`${styles.inputLocation}` }>
         <input className="fas fa-map-marker-alt"
           id="email"
           type="email" 

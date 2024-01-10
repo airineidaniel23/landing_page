@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components import
 import Navbar from "./components/Navbar/Navbar";
@@ -9,6 +10,7 @@ import Growth from "./components/Growth/Growth";
 import Questions from "./components/Questions/Questions";
 import Footer from "./components/Footer/Footer";
 import ContactForm from "./components/ContactForm/ContactForm";
+import Heatmap from './components/Heatmap/Heatmap'; 
 
 const App = () => {
   const [hamActive, setHamActive] = useState(false);
@@ -16,7 +18,10 @@ const App = () => {
     <div className="App">
       <Navbar hamActive={hamActive} setHamActive={setHamActive} />
       <NavbarResponsive hamActive={hamActive} />
-      <Hero />
+      <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/ndvi" element={<Heatmap/>} />
+        </Routes>
       <Features />
       <ContactForm />
       <Growth />

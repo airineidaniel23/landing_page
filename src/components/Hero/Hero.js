@@ -1,7 +1,15 @@
 import styles from "./Hero.module.css";
 import ContactForm from "../ContactForm/ContactForm";
 
+import { useNavigate } from 'react-router-dom'; 
 const Hero = () => {
+  const navigate = useNavigate(); 
+
+  // Function to handle button click
+  const goToHeatmap = () => {
+    navigate('/ndvi');
+  };
+  
   return (
     <div className={`${styles.heroWrapper} center`}>
       <div className={`${styles.heroInner}`}>
