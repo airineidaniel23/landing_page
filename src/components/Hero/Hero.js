@@ -1,6 +1,5 @@
 import styles from "./Hero.module.css";
 import ContactForm from "../ContactForm/ContactForm";
-import { useNavigate } from 'react-router-dom'; 
 import React from 'react';
 
 import { useNavigate } from 'react-router-dom'; 
